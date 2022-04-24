@@ -1,0 +1,79 @@
+.main {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    border: 10px solid skyblue;
+    grid-template-columns: 100px 100px 100px;
+    /* 上一行可以写成 grid-template-columns: repeat(3, 100px) */
+    /* 但是一般不知道实际的宽度，所以要用以下代码平分宽度 */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* 上一行相当于 grid-template-columns: 1fr 1fr 1fr */
+    /* 根据上一行代码可以得出：
+    grid-template-columns: 1fr 2fr 3fr
+    即三列不同宽度占比 */
+    /* 此时如果只写列宽，不写行高，那么默认所有行高加起来占满父盒子的高度 */
+    grid-template-rows: 100px 100px 100px 100px;
+    /* row-gap: 20px;
+    column-gap: 20px; */
+    /* 上面两句话等于： */
+    gap: 20px 20px;
+    grid-template-areas: 'a a a' 'b b b' 'g h i';
+    grid-auto-flow: row;
+    /* justify-items: center;
+    align-items: center; */
+    /* 上面两句话等于： */
+    /* place-items: center center;
+    justify-content: center;
+    align-content: center; */
+}
+
+.item {
+    font-size: 50px;
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.item-1 {
+    background-color: #ef342a;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* 上面两句话等于： */
+    /* grid-column: 1 / 3; */
+    /* 从第一列到第三列，即跨越两列，故可以写成如下两行 */
+    /* grid-column-start: span 2;
+    grid-row: 1 / 4; */
+}
+
+.item-2 {
+    background-color: #f68f26;
+    grid-area: a;
+}
+
+.item-3 {
+    background-color: #4ba946;
+    justify-self: center;
+}
+
+.item-4 {
+    background-color: #0376c2;
+}
+
+.item-5 {
+    background-color: #c077af;
+}
+
+.item-6 {
+    background-color: #f8d29d;
+}
+
+.item-7 {
+    background-color: #b5a87f;
+}
+
+.item-8 {
+    background-color: #d0e4a9;
+}
+
+.item-9 {
+    background-color: #4dc7ec;
+}

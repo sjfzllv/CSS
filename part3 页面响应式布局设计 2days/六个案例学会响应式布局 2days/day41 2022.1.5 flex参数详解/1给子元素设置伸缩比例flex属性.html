@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div0 {
+            display: flex;
+            width: 400px;
+            height: 500px;
+            background-color: violet;
+        }
+
+        #div div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* flex-basis: 30%; */
+        }
+
+        /*
+            400-50-100=250px
+            250/5=50
+            50+50
+            100+200
+        */
+
+        /*
+            400-600=-200
+            200/4=50
+            300-50=250
+            300-150=150
+        */
+
+        #div0 div:nth-child(1) {
+            /* flex-basis: 50px;   设置此属性后，width失效 */
+            /* flex-basis: 300px;
+            flex-grow: 1; */
+            /* flex-shrink: 0; */
+            /* flex-shrink: 1; */
+            flex: 1 1 300px;
+        }
+
+        #div0 div:nth-child(2) {
+            /* flex-basis: 100px; */
+            /* flex-basis: 300px;
+            flex-grow: 4; */
+            /* flex-shrink: 0; */
+            /* flex-shrink: 3; */
+            flex: 4 3 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

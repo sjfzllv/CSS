@@ -1,0 +1,81 @@
+#zheng {
+    width: 50px;
+    height: 50px;
+    border-top: 50px solid #f00;
+    border-left: 50px solid #0f0;
+    border-right: 50px solid #00f;
+    border-bottom: 50px solid #ff0;
+}
+
+#wubian {
+    margin: 100px auto;
+    width: 54px;
+    height: 0;
+    border-top: 50px solid red;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    position: relative;
+}
+
+#wubian::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid blue;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    top: -85px;
+    left: -18px;
+}
+
+#six {
+    width: 80px;
+    height: 0;
+    border-bottom: 70px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    position: relative;
+}
+
+#six::after {
+    content: "";
+    width: 80px;
+    height: 0;
+    position: absolute;
+    border-top: 60px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    left: -40px;
+    top: 70px;
+}
+
+#six1 {
+    margin: 100px auto;
+    width: 100px;
+    height: 55px;
+    background-color: red;
+    position: relative;
+}
+
+#six1::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-bottom: 25px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    top: -25px;
+}
+
+#six1::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 25px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    top: 55px;
+}

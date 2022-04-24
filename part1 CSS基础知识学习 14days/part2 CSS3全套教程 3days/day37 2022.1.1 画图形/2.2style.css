@@ -1,0 +1,32 @@
+.sanjiao {
+    border-top: 50px solid transparent;
+    border-left: 50px solid #f00;
+    border-bottom: 50px solid transparent;
+    /* border-radius: 50px solid #00f; */
+    width: 0;
+    height: 0;
+    margin: 50px auto;
+}
+
+.dialog {
+    background-color: #6a6;
+    margin: 505px auto;
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    position: relative;
+}
+
+.dialog::before {
+    content: "";
+    border-top: 10px solid transparent;
+    /* border-left: 10px solid #6a6; */
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #6a6;
+    position: absolute;
+    left: -10px;
+    top: 14px;
+}
